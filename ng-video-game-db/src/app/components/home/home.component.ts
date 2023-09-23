@@ -1,4 +1,5 @@
 import { Component , OnDestroy, OnInit } from '@angular/core';
+import { APIResponse, Game } from 'src/app/model';
 
 @Component({
   selector: 'app-home',
@@ -8,6 +9,7 @@ import { Component , OnDestroy, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   public sort: string;
+  public games: Array<Game>;
   
   constructor() { }
 
