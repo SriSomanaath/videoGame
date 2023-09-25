@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
   public games: Array<Game>;
   private routeSub: Subscription;
   private gameSub: Subscription;
-  
+
   constructor(    
     private httpService: HttpService,
     private router: Router,
@@ -36,9 +36,9 @@ export class HomeComponent implements OnInit {
       .getGameList(sort, search)
       .subscribe((gameList: APIResponse<Game>) => {
         this.games = gameList.results;
-        console.log(gameList);
       });
   }
+
   openGameDetails(id: string): void {
     this.router.navigate(['details', id]);
   }
@@ -52,6 +52,5 @@ export class HomeComponent implements OnInit {
       this.routeSub.unsubscribe();
     }
   }
-
 
 }

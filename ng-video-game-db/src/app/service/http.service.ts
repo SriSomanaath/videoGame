@@ -33,12 +33,7 @@ export class HttpService {
     const gameScreenshotsRequest = this.http.get(
       `${env.BASE_URL}/games/${id}/screenshots`
     );
-
-    return forkJoin({
-      gameInfoRequest,
-      gameScreenshotsRequest,
-      gameTrailersRequest,
-    }).pipe(
+    return forkJoin({gameInfoRequest,gameScreenshotsRequest,gameTrailersRequest}).pipe(
       map((resp: any) => {
         return {
           ...resp['gameInfoRequest'],

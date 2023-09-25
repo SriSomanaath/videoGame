@@ -11,6 +11,7 @@ import {
 
 @Injectable()
 export class HttpErrorsInterceptor implements HttpInterceptor {
+  
   constructor() {}
 
   intercept(

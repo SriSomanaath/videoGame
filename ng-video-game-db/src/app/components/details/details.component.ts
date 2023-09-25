@@ -9,6 +9,7 @@ import { HttpService } from 'src/app/service/http.service';
   templateUrl: './details.component.html',
   styleUrls: ['./details.component.scss']
 })
+
 export class DetailsComponent implements OnInit, OnDestroy{
   gameRating = 0;
   gameId: string;
@@ -35,6 +36,7 @@ export class DetailsComponent implements OnInit, OnDestroy{
           this.gameRating = this.game.metacritic;
         }, 1000);
       });
+      console.log("gamdet",this.gameSub);
   }
 
   getColor(value: number): string {
